@@ -66,12 +66,12 @@ const App = () => {
           - <span id="author">{userData.author || "Author"}</span>
         </div>
 
-        <button class="button" id="new-quote" onClick={getNewQuote}>
+        <button className="button" id="new-quote" onClick={getNewQuote}>
           new quote
         </button>
 
         <button
-          class="button"
+          className="button"
           id="tweet-quote"
           title="Tweet this quote!"
           target="_top"
