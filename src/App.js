@@ -1,16 +1,17 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { FaTwitter } from "react-icons/fa";
-import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
-import "./App.css";
-
-
-const apiUrl = "http://quotes.stormconsultancy.co.uk/random.json";
+import Author from "./components/Author";
+import Footer from "./components/Footer";
+import NewQuote from "./components/NewQuote";
+import QuoteText from "./components/QuoteText";
+import TwitterButton from "./components/TwitterButton";
+import "./css/App.css";
 
 /**
- *
- * Main Component
+ * Where we get our data.
  */
+const apiUrl = "http://quotes.stormconsultancy.co.uk/random.json";
+
 const App = () => {
   /**
    * The State Hook below will allow the use of state in the function component
@@ -21,7 +22,15 @@ const App = () => {
    * setUserData is equivalent to writing this.setState()
    * to update the component state with the value of userData.
    */
-  const [userData, setUserData] = useState({});
+  const [ userData, setUserData ] = useState({});
+
+  /**
+ * Fetch and handle our json
+ */
+  const getApiUrlAxios = async () => {
+    const response = await axios.get(apiUrl);
+    setUserData(response.data);
+  };
 
   /**
    * Effect Hook will allow you to perform side effect operations such as fetching data,
@@ -38,15 +47,7 @@ const App = () => {
   }, []);
 
   /**
-   * Fetch and handle our json
-   */
-  const getApiUrlAxios = async () => {
-    const response = await axios.get(apiUrl);
-    setUserData(response.data);
-  };
-
-  /**
-   * preventDefault is used here to stop spammy request.
+   * preventDefault is used here to stop spam request.
    */
   const getNewQuote = (e) => {
     e.preventDefault();
@@ -56,42 +57,12 @@ const App = () => {
   return (
     <div id="wrapper">
       <div id="quote-box">
-        <div id="quote-text">
-          <span id="text">
-            <ImQuotesLeft /> {userData.quote || "Quote"} <ImQuotesRight />
-          </span>
-        </div>
-
-        <div id="quote-author">
-          - <span id="author">{userData.author || "Author"}</span>
-        </div>
-
-        <button class="button" id="new-quote" onClick={getNewQuote}>
-          new quote
-        </button>
-
-        <button
-          class="button"
-          id="tweet-quote"
-          title="Tweet this quote!"
-          target="_top"
-        >
-          <a
-            href={`https://twitter.com/intent/tweet?text=${userData.quote}- ${userData.author}`}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <FaTwitter />
-          </a>
-        </button>
+        <QuoteText quote={userData.quote} />
+        <Author author={userData.author} />
+        <NewQuote getNewQuote={getNewQuote} />
+        <TwitterButton userData={userData} />
       </div>
-
-      <footer>
-        source code @{" "}
-        <a href="https://github.com/milliorn" target="_blank" rel="noreferrer">
-          github
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 };
