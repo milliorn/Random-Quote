@@ -9,7 +9,7 @@ import Quote from "./Quote";
 export default function QuoteText(props) {
   return (
     <div id="quote-text">
-      <Quote quote={props.quote}></Quote>
+      <Quote quote={props.quote} />
     </div>
   );
 }
