@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 /**
  * Get the author of the quote
@@ -8,7 +9,15 @@ import React from "react";
 export default function Author(props) {
   return (
     <div id="quote-author">
-      - <span id="author">{props.author || "Author"}</span>
+      - <span id="author">{props.author}</span>
     </div>
   );
 }
+
+Author.propTypes = {
+  author: PropTypes.string,
+};
+
+Author.defaultProps = {
+  author: "author",
+};
