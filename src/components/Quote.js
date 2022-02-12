@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 export default function Quote(props) {
   return (
     <span id="text">
-      <ImQuotesLeft /> {props.quote || "Quote"} <ImQuotesRight />
+      <ImQuotesLeft /> {props.quote} <ImQuotesRight />
     </span>
   );
 }
