@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 /**
  * Get new quote
@@ -16,4 +17,8 @@ export default function NewQuote(props) {
       new quote
     </button>
   );
+}
+
+NewQuote.propTypes = {
+  getNewQuote: PropTypes.func
 }

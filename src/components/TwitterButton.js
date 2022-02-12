@@ -1,5 +1,6 @@
 import React from "react";
 import { FaTwitter } from "react-icons/fa";
+import PropTypes from "prop-types";
 
 /**
  * Twitter
@@ -22,4 +23,10 @@ export default function TwitterButton(props) {
       </a>
     </button>
   );
+}
+
+TwitterButton.propTypes = {
+  userData: PropTypes.object,
+  quote: PropTypes.string,
+  author: PropTypes.string
 }

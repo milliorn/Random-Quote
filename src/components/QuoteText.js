@@ -1,5 +1,6 @@
 import React from "react";
 import Quote from "./Quote";
+import PropTypes from "prop-types";
 
 /**
  * Get the quoted text
@@ -12,4 +13,8 @@ export default function QuoteText(props) {
       <Quote quote={props.quote}></Quote>
     </div>
   );
+}
+
+QuoteText.propTypes = {
+  quote: PropTypes.string
 }
