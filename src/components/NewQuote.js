@@ -20,5 +20,9 @@ export default function NewQuote(props) {
 }
 
 NewQuote.propTypes = {
-  getNewQuote: PropTypes.func
-}
+  getNewQuote: PropTypes.func,
+};
+
+NewQuote.defaultProps = {
+  onclick: () => {},
+};

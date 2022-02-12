@@ -26,7 +26,11 @@ export default function TwitterButton(props) {
 }
 
 TwitterButton.propTypes = {
-  userData: PropTypes.object,
   quote: PropTypes.string,
-  author: PropTypes.string
-}
+  author: PropTypes.string,
+};
+
+TwitterButton.defaultProps = {
+  quote: "quote",
+  author: "author",
+};

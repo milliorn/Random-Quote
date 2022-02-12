@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 /**
  * Get the author of the quote
- * @param {*} props 
- * @returns 
+ * @param {*} props
+ * @returns
  */
 export default function Author(props) {
   return (
@@ -15,5 +15,9 @@ export default function Author(props) {
 }
 
 Author.propTypes = {
-  author: PropTypes.string
-}
+  author: PropTypes.string,
+};
+
+Author.defaultProps = {
+  author: "author",
+};

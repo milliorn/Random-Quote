@@ -16,5 +16,9 @@ export default function Quote(props) {
 }
 
 Quote.propTypes = {
-  quote: PropTypes.string
-}
+  quote: PropTypes.string,
+};
+
+Quote.defaultProps = {
+  quote: "quote",
+};

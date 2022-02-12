@@ -10,11 +10,15 @@ import PropTypes from "prop-types";
 export default function QuoteText(props) {
   return (
     <div id="quote-text">
-      <Quote quote={props.quote}></Quote>
+      <Quote quote={props.quote} />
     </div>
   );
 }
 
 QuoteText.propTypes = {
-  quote: PropTypes.string
-}
+  quote: PropTypes.string,
+};
+
+QuoteText.defaultProps = {
+  quote: "quote",
+};
