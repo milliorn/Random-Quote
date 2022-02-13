@@ -10,18 +10,12 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-transform: capitalize;
-}
-
 div {
-  position: relative;
   z-index: 2;
 }
 
 body {
   align-items: center;
-  background-color: #0f172a;
   display: flex;
   font-weight: 400;
   height: 100vh;
@@ -29,104 +23,134 @@ body {
 }
 
 footer {
-  color: #fff;
   display: block;
-  font-size: 1rem;
-  line-height: 1.5rem;
   margin: 1rem auto 2rem auto;
-  text-align: center;
-  width: 24rem;
 }
 
 button {
   cursor: pointer;
 }
 
+#new-quote {
+  float: inline-start;
+}
+
 #quote-author {
-  clear: both;
   font-size: 1.25rem;
-  height: auto;
   line-height: 1.75rem;
   padding-top: 1.25rem;
-  text-align: right;
-  width: 24rem;
 }
 
 #quote-box {
+  background-blend-mode: multiply;
   background-color: #fff;
-  border-radius: 1.5rem;
-  border-width: 1px;
   display: flexbox;
   margin: 1px auto auto auto;
   opacity: 0.9;
   padding: 2.5rem 3rem;
-  position: relative;
-  width: 24rem;
-  background-blend-mode: multiply;
 }
 
 #quote-text {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
-  clear: both;
-  font-size: 1rem;
   font-style: italic;
   font-weight: 500;
-  height: auto;
   letter-spacing: 0.05em;
-  line-height: 1.5rem;
   overflow-wrap: break-word;
-  text-align: center;
-  width: 24rem;
 }
 
 #text {
-  font-size: 1rem;
-  height: auto;
-  line-height: 1.5rem;
   text-align: left;
-  text-transform: capitalize;
-  width: 24rem;
 }
 
 #author {
   font-size: 1rem;
-  height: auto;
-  line-height: 1.5rem;
   padding-top: 1.5rem;
-  text-align: right;
+}
+
+footer,
+#text,
+#author {
+  line-height: 1.5rem;
+}
+
+footer,
+#new-quote {
+  color: #fff;
+}
+
+#author,
+#new-quote,
+#text,
+a:hover {
   text-transform: capitalize;
+}
+
+#author,
+#quote-author {
+  text-align: right;
+}
+
+#author,
+#quote-author,
+#quote-box,
+#quote-text,
+#text,
+footer {
   width: 24rem;
 }
 
-#new-quote {
-  background-color: #0f172a;
-  border-color: #95ace1;
-  border-radius: 1.5rem;
-  border-width: 1px;
-  color: white;
-  float: inline-start;
-  margin: 0.25rem;
-  padding: 1rem;
-  text-transform: capitalize;
+#author,
+#quote-author,
+#text {
+  height: auto;
 }
 
+#new-quote,
+#quote-box,
 #tweet-quote {
-  background-color: #0f172a;
-  border-color: #95ace1;
   border-radius: 1.5rem;
   border-width: 1px;
-  color: #1da1f2;
-  float: left;
+}
+
+#new-quote,
+#tweet-quote,
+body {
+  background-color: #0f172a;
+}
+
+#new-quote,
+#tweet-quote {
+  border-color: #95ace1;
   margin: 0.25rem;
   padding: 1rem;
+}
+
+#new-quote:hover,
+#tweet-quote:hover {
+  background-color: #fff;
+  color: #0f172a;
+}
+
+#quote-box,
+div {
+  position: relative;
+}
+
+#quote-author,
+#quote-text {
+  clear: both;
+}
+
+#quote-text,
+#tweet-quote,
+footer {
   text-align: center;
 }
 
-#tweet-quote:hover,
-#new-quote:hover {
-  background-color: #fff;
-  color: #0f172a;
+#tweet-quote {
+  color: #1da1f2;
+  float: left;
 }
 
 /* 
