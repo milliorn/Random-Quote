@@ -31,52 +31,15 @@ button {
   cursor: pointer;
 }
 
-#new-quote {
-  float: inline-start;
-}
-
-#quote-author {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  padding-top: 1.25rem;
-}
-
-#quote-box {
-  background-blend-mode: multiply;
-  background-color: #fff;
-  display: flexbox;
-  margin: 1px auto auto auto;
-  opacity: 0.9;
-  padding: 2.5rem 3rem;
-}
-
-#quote-text {
-  -moz-osx-font-smoothing: auto;
-  -webkit-font-smoothing: auto;
-  font-style: italic;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  overflow-wrap: break-word;
-}
-
-#text {
-  text-align: left;
-}
-
 #author {
   font-size: 1rem;
   padding-top: 1.5rem;
 }
 
-footer,
+#author,
 #text,
-#author {
+footer {
   line-height: 1.5rem;
-}
-
-footer,
-#new-quote {
-  color: #fff;
 }
 
 #author,
@@ -106,11 +69,13 @@ footer {
   height: auto;
 }
 
+#new-quote {
+  float: inline-start;
+}
+
 #new-quote,
-#quote-box,
-#tweet-quote {
-  border-radius: 1.5rem;
-  border-width: 1px;
+footer {
+  color: #fff;
 }
 
 #new-quote,
@@ -132,9 +97,17 @@ body {
   color: #0f172a;
 }
 
+#new-quote,
 #quote-box,
-div {
-  position: relative;
+#tweet-quote {
+  border-radius: 1.5rem;
+  border-width: 1px;
+}
+
+#quote-author {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding-top: 1.25rem;
 }
 
 #quote-author,
@@ -142,10 +115,37 @@ div {
   clear: both;
 }
 
+#quote-box {
+  background-blend-mode: multiply;
+  background-color: #fff;
+  display: flexbox;
+  margin: 1px auto auto auto;
+  opacity: 0.9;
+  padding: 2.5rem 3rem;
+}
+
+#quote-box,
+div {
+  position: relative;
+}
+
+#quote-text {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  overflow-wrap: break-word;
+}
+
 #quote-text,
 #tweet-quote,
 footer {
   text-align: center;
+}
+
+#text {
+  text-align: left;
 }
 
 #tweet-quote {
